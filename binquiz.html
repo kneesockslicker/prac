@@ -10,7 +10,10 @@
 		
 		function reload()
 		{
-			  location.reload();
+			xnum=Math.ceil(Math.random()*256);
+			document.forms[0].elements[0].value=xnum;
+			xnum=Math.ceil(Math.random()*100);
+			document.forms[0].elements[4].value=Decimal_to_binary(xnum);
 		}
 		function Decimal_to_binary(x)
 		{
@@ -40,6 +43,7 @@
 		
 			document.forms[0].elements[which].value = correct;
 		}
+		
 		//End hide -->
 	</SCRIPT>
 
