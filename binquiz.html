@@ -1,0 +1,120 @@
+<HTML>
+
+<HEAD>
+	<TITLE>Decimal and Binary Quiz</TITLE>
+	<META NAME="resource-type" VALUE="document">
+	<META NAME="description" VALUE="Quiz">
+	<META NAME="author" VALUE="gurwitz@sci.brooklyn.cuny.edu">
+	<SCRIPT LANGUAGE="JavaScript">
+		<!-- Hide scripts from old browsers
+		
+		function reload()
+		{
+			  location.reload();
+		}
+		function Decimal_to_binary(x)
+		{
+			
+			z= new Number(x);
+		//	document.forms[0].elements[1].value=z.toString(2);
+			return z.toString(2);
+		}
+		
+		function Binary_to_decimal(x)
+		{
+		
+		y=parseInt(x,2);
+		return (y);
+		//document.forms[1].elements[1].value=y;
+		}
+
+		function answer(correct,which) {
+			if (document.forms[0].elements[which].value == correct) {
+				alert("Correct!");
+			}
+			else {
+				alert("Wrong answer! Try again.");
+			}
+		}
+		function give(correct,which) {
+		
+			document.forms[0].elements[which].value = correct;
+		}
+		//End hide -->
+	</SCRIPT>
+
+
+</HEAD>
+<SCRIPT>
+	<!--- Hide script from old browsers
+	if (navigator.appVersion.substring(0,1)<3){
+		document.write("you are using an older browser. Wait a minute.");
+		document.close();
+		document.location="nav2quiz.html";
+		document.open();
+	}
+	//End hide -->
+</SCRIPT>
+
+<BODY BACKGROUND="../images/data02.jpg">
+	<H3>
+		Decimal/Binary Conversion Quiz
+	</H3>
+	<HR>
+	<B>
+		<FONT COLOR=RED>
+			Note:</FONT>
+		<FONT SIZE=-1>
+			This page requires Netscape Navigator 2.0 or higher.
+		</FONT>
+		<P>
+			Take this quiz to test yourself
+			on conversion between decimal
+			and binary representations.
+			Type your answer in the blank and click on &quot;Check Answer&quot;.
+
+			Stumped? click on &quot;Give Up&quot;.
+			To test yourself again, click on the &quot;New Quiz&quot; button.
+		<P>
+
+
+		<FORM>
+			Convert the value below to binary:
+			<BR>
+			<INPUT SIZE=7>
+			<SCRIPT>
+				<!--- Hide from old browsers
+				xnum=Math.ceil(Math.random()*256);
+				document.forms[0].elements[0].value=xnum;
+				// End hide -->
+			</SCRIPT>
+			<INPUT SIZE=24>
+			<BR>
+			<INPUT TYPE="button" VALUE="Check Answer"
+				onClick="answer(Decimal_to_binary(document.forms[0].elements[0].value),1);">
+			<INPUT TYPE="button" VALUE="Give Up"
+				onClick="give(Decimal_to_binary(document.forms[0].elements[0].value),1);">
+			<P>
+				<BR>
+				Convert the value below to decimal:
+				<BR>
+				<INPUT SIZE=24>
+				<SCRIPT>
+					<!--- Hide from old browsers
+					xnum=Math.ceil(Math.random()*100);
+					document.forms[0].elements[4].value=Decimal_to_binary(xnum);
+					// End hide -->
+				</SCRIPT>
+				<INPUT SIZE=7>
+				<BR>
+				<INPUT TYPE="button" VALUE="Check Answer"
+					onClick="answer(Binary_to_decimal(document.forms[0].elements[4].value),5);">
+				<INPUT TYPE="button" VALUE="Give Up"
+					onClick="give(Binary_to_decimal(document.forms[0].elements[4].value),5);">
+				<BR>
+				<br>
+				<INPUT TYPE="Reset" VALUE="New Quiz" onClick="reload()">
+				<BR>
+
+		</FORM>
+	</B>
